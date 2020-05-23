@@ -2,6 +2,20 @@ import device from '../../responsive';
 import styled from 'styled-components';
 
 
+export const SearchBar = styled.form`
+  top: ${({ showResult }) => (showResult ? '0%' : '30%')};
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  transition: 0.8s 0.5s;
+  @media ${device.laptopL} {
+    max-width: 600px;
+  }
+  @media ${device.desktop} {
+    max-width: 700px;
+  }
+`;
+
 export const SearchInput = styled.input`
   width: 100%;
   border: none;

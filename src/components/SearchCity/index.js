@@ -1,24 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
-import {SearchInput,SearchIcon} from './Search.style';
-import device from '../../responsive';
-
-const SearchBar = styled.form`
-  top: ${({ showResult }) => (showResult ? '0%' : '30%')};
-  position: relative;
-  margin: 0 auto;
-  max-width: 500px;
-  transition: 0.8s 0.5s;
-  @media ${device.laptopL} {
-    max-width: 600px;
-  }
-  @media ${device.desktop} {
-    max-width: 700px;
-  }
-`;
-
+import {SearchBar,SearchInput,SearchIcon} from './Search.style';
 
 export const SearchCity = ({ submit, value, change, showResult }) => {
   return (
